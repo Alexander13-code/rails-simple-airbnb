@@ -1,0 +1,23 @@
+<h1>FlatO the appartement you need to feel at home 😎</h1>
+<div class="cards">
+  <% @flats.each do |flat| %>
+    <%= link_to flat_path(flat) , class:"text-decoration-none text-dark" do %>
+    <div class="card-trip">
+      <%= image_tag "apps.webp" %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= flat.name %></h2>
+          <p><%= flat.address %></p>
+          <i class="fa-solid fa-people-roof" style="color: #005eff;"></i>
+          <%= flat.number_of_guests %>
+        </div>
+        <h2 class="card-trip-pricing">
+        <i class="fa-solid fa-hand-holding-dollar" style="color: #005eff;"></i>
+        <%= flat.price_per_night %>
+        <i class="fa-solid fa-euro-sign" style="color: #005eff;"></i>
+        </h2>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
